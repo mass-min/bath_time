@@ -11,6 +11,10 @@
 |
 */
 
+
+Route::group(['as' => 'api.bathTime.', 'namespace' => 'Api'], function () {
+    Route::get('/search', 'BathTimeController@search')->name('search');
+});
 Route::get('/', function () {
     return view('welcome');
 });
